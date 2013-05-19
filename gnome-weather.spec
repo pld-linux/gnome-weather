@@ -1,11 +1,11 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
-Version:	3.8.1
+Version:	3.8.2
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	10396473614b30437980c076102d900b
+# Source0-md5:	ee473f894a924fb75029fef284748d22
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	gettext-devel
