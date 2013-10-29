@@ -1,7 +1,7 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
 Version:	3.10.1
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.10/%{name}-%{version}.tar.xz
