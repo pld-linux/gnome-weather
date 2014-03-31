@@ -5,7 +5,7 @@ Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	4a4c2a938d51b746b9a8daa7eaf33dc9
+# Source0-md5:	fa4121882f2cc8d94e7fa8e3a79bce03
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
 BuildRequires:	gdk-pixbuf2-devel
