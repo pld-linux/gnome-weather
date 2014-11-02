@@ -1,11 +1,12 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
-Version:	3.12.1
+Version:	3.14.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	e413c479c11c5a3b6b8faf2e5b775928
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	02b330952283ca90494813b0253d2428
+BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
 BuildRequires:	gdk-pixbuf2-devel
@@ -38,7 +39,7 @@ and to access updated forecasts provided by various internet services.
 
 %build
 %{__intltoolize}
-%{__aclocal} -I m4 -I libgd
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
@@ -53,32 +54,31 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%{__rm} $RPM_BUILD_ROOT%{_libdir}/org.gnome.Weather.Application/*.la
-
-%find_lang org.gnome.Weather.Application
+%find_lang org.gnome.Weather
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
 %glib_compile_schemas
+%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
 %postun
 %glib_compile_schemas
+%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
-%files -f org.gnome.Weather.Application.lang
+%files -f org.gnome.Weather.lang
 %defattr(644,root,root,755)
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-weather
-%dir %{_libdir}/org.gnome.Weather.Application
-%{_libdir}/org.gnome.Weather.Application/girepository-1.0
-%attr(755,root,root) %{_libdir}/org.gnome.Weather.Application/libgd.so
 %{_datadir}/appdata/org.gnome.Weather.Application.appdata.xml
 %{_datadir}/dbus-1/services/org.gnome.Weather.Application.service
+%{_datadir}/dbus-1/services/org.gnome.Weather.BackgroundService.service
 %{_datadir}/gnome-shell/search-providers/org.gnome.Weather.Application.search-provider.ini
 %{_datadir}/glib-2.0/schemas/org.gnome.Weather.Application.gschema.xml
-%{_datadir}/org.gnome.Weather.Application
+%{_datadir}/org.gnome.Weather
 %{_desktopdir}/org.gnome.Weather.Application.desktop
+%{_iconsdir}/HighContrast/*/*/org.gnome.Weather.Application.png
 %{_iconsdir}/hicolor/*/*/org.gnome.Weather.Application.png
