@@ -10,7 +10,7 @@ BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
 BuildRequires:	gdk-pixbuf2-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gjs-devel >= 1.40.0
 BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
