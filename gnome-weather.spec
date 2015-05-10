@@ -1,11 +1,11 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
-Version:	3.14.1
+Version:	3.16.2.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.14/%{name}-%{version}.tar.xz
-# Source0-md5:	02b330952283ca90494813b0253d2428
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.16/%{name}-%{version}.tar.xz
+# Source0-md5:	7ef86eeffcff12df037d74b9de8f6f9e
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
@@ -16,7 +16,7 @@ BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libgweather-devel >= 3.10.0
+BuildRequires:	libgweather-devel >= 3.16.0
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -26,7 +26,7 @@ Requires:	gjs >= 1.40.0
 Requires:	glib2 >= 1:2.36.0
 Requires:	gtk+3 >= 3.12.0
 Requires:	hicolor-icon-theme
-Requires:	libgweather >= 3.10.0
+Requires:	libgweather >= 3.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,7 +41,6 @@ and to access updated forecasts provided by various internet services.
 %{__intltoolize}
 %{__aclocal} -I m4
 %{__autoconf}
-%{__autoheader}
 %{__automake}
 %configure \
 	GJS="/usr/bin/gjs" \
@@ -61,12 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %glib_compile_schemas
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
 %postun
 %glib_compile_schemas
-%update_icon_cache HighContrast
 %update_icon_cache hicolor
 
 %files -f org.gnome.Weather.lang
@@ -80,5 +77,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/glib-2.0/schemas/org.gnome.Weather.Application.gschema.xml
 %{_datadir}/org.gnome.Weather
 %{_desktopdir}/org.gnome.Weather.Application.desktop
-%{_iconsdir}/HighContrast/*/*/org.gnome.Weather.Application.png
 %{_iconsdir}/hicolor/*/*/org.gnome.Weather.Application.png
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Weather.Application-symbolic.svg
