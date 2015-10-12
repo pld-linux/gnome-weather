@@ -1,11 +1,11 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
-Version:	3.16.2.1
+Version:	3.18.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.16/%{name}-%{version}.tar.xz
-# Source0-md5:	7ef86eeffcff12df037d74b9de8f6f9e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.18/%{name}-%{version}.tar.xz
+# Source0-md5:	eb6832d8a6492d24171df681e1603da4
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
@@ -16,7 +16,7 @@ BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	intltool >= 0.40.0
-BuildRequires:	libgweather-devel >= 3.16.0
+BuildRequires:	libgweather-devel >= 3.18.0
 BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
@@ -26,7 +26,7 @@ Requires:	gjs >= 1.40.0
 Requires:	glib2 >= 1:2.36.0
 Requires:	gtk+3 >= 3.12.0
 Requires:	hicolor-icon-theme
-Requires:	libgweather >= 3.16.0
+Requires:	libgweather >= 3.18.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
