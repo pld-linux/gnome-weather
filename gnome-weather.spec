@@ -1,15 +1,16 @@
 Summary:	A weather application for GNOME
 Name:		gnome-weather
-Version:	3.18.1
-Release:	2
+Version:	3.24.0
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.18/%{name}-%{version}.tar.xz
-# Source0-md5:	eb6832d8a6492d24171df681e1603da4
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.24/%{name}-%{version}.tar.xz
+# Source0-md5:	9f7e4162322a65170f664d8d6065518d
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake >= 1:1.12
 BuildRequires:	gdk-pixbuf2-devel
+BuildRequires:	geoclue2-devel >= 2.3.1
 BuildRequires:	gettext-tools
 BuildRequires:	gjs-devel >= 1.40.0
 BuildRequires:	glib2-devel >= 1:2.36.0
@@ -17,11 +18,12 @@ BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	intltool >= 0.40.0
 BuildRequires:	libgweather-devel >= 3.18.0
-BuildRequires:	pkgconfig
+BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.36.0
 Requires(post,postun):	gtk-update-icon-cache
+Requires:	geoclue2 >= 2.3.1
 Requires:	gjs >= 1.40.0
 Requires:	glib2 >= 1:2.36.0
 Requires:	gtk+3 >= 3.12.0
@@ -70,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc NEWS
 %attr(755,root,root) %{_bindir}/gnome-weather
-%{_datadir}/appdata/org.gnome.Weather.Application.appdata.xml
+%{_datadir}/appdata/org.gnome.Weather.appdata.xml
 %{_datadir}/dbus-1/services/org.gnome.Weather.Application.service
 %{_datadir}/dbus-1/services/org.gnome.Weather.BackgroundService.service
 %{_datadir}/gnome-shell/search-providers/org.gnome.Weather.Application.search-provider.ini
@@ -81,5 +83,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/org.gnome.Weather/org.gnome.Weather.Application.*.gresource
 %{_datadir}/org.gnome.Weather/org.gnome.Weather.BackgroundService.*.gresource
 %{_desktopdir}/org.gnome.Weather.Application.desktop
-%{_iconsdir}/hicolor/*/*/org.gnome.Weather.Application.png
-%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Weather.Application-symbolic.svg
+%{_iconsdir}/hicolor/*/*/org.gnome.Weather.png
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Weather-symbolic.svg
