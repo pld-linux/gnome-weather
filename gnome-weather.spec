@@ -1,12 +1,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	3.32.2
+Version:	3.34.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.32/%{name}-%{version}.tar.xz
-# Source0-md5:	824022f82b3abc466e1afad99b431039
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.34/%{name}-%{version}.tar.xz
+# Source0-md5:	39362771d7abaf0f161ea3e4b1e2dcb1
 URL:		https://wiki.gnome.org/Apps/Weather
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
@@ -16,7 +16,7 @@ BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk+3-devel >= 3.20
 BuildRequires:	libgweather-devel >= 3.28
-BuildRequires:	meson >= 0.46.0
+BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	rpmbuild(macros) >= 1.736
@@ -27,6 +27,7 @@ Requires(post,postun):	gtk-update-icon-cache
 Requires:	geoclue2 >= 2.3.1
 Requires:	gjs >= 1.50.0
 Requires:	glib2 >= 1:2.36.0
+Requires:	gobject-introspection >= 1.36.0
 Requires:	gtk+3 >= 3.20
 Requires:	hicolor-icon-theme
 Requires:	libgweather >= 3.28
@@ -50,17 +51,6 @@ serwisy internetowe.
 %meson build
 
 %ninja_build -C build
-
-%if 0
-%{__intltoolize}
-%{__aclocal} -I m4
-%{__autoconf}
-%{__automake}
-%configure \
-	GJS="/usr/bin/gjs" \
-	--disable-silent-rules
-%{__make}
-%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
