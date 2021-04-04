@@ -1,12 +1,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	3.36.1
+Version:	40.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-weather/3.36/%{name}-%{version}.tar.xz
-# Source0-md5:	a028a4662b235eb6de442598c7e07fbe
+Source0:	https://download.gnome.org/sources/gnome-weather/40/%{name}-%{version}.tar.xz
+# Source0-md5:	a172aa420065fd58d376429d2e80f603
 URL:		https://wiki.gnome.org/Apps/Weather
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
@@ -16,6 +16,7 @@ BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk+3-devel >= 3.20
 BuildRequires:	libgweather-devel >= 3.28
+BuildRequires:	libhandy1-devel >= 1.1.90
 BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig >= 1:0.22
@@ -31,6 +32,8 @@ Requires:	gobject-introspection >= 1.36.0
 Requires:	gtk+3 >= 3.20
 Requires:	hicolor-icon-theme
 Requires:	libgweather >= 3.28
+Requires:	libhandy1 >= 1.1.90
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -85,4 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/org.gnome.Weather/org.gnome.Weather.*.gresource
 %{_desktopdir}/org.gnome.Weather.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.gnome.Weather.svg
+%{_iconsdir}/hicolor/scalable/status/temperature-symbolic.svg
+%{_iconsdir}/hicolor/scalable/status/weather-*.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Weather-symbolic.svg
