@@ -1,12 +1,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	40.0
+Version:	40.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/gnome-weather/40/%{name}-%{version}.tar.xz
-# Source0-md5:	a172aa420065fd58d376429d2e80f603
+# Source0-md5:	8cb2525bb9321ff27889877bbd735d7d
 URL:		https://wiki.gnome.org/Apps/Weather
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
