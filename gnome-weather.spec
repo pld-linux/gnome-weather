@@ -2,12 +2,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	42.0
+Version:	43.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-weather/42/%{name}-%{version}.tar.xz
-# Source0-md5:	702c07e0da5db7a3f779d74a55606fcb
+Source0:	https://download.gnome.org/sources/gnome-weather/43/%{name}-%{version}.tar.xz
+# Source0-md5:	887033ffdcaac33870cc5ad0bfe96e96
 URL:		https://wiki.gnome.org/Apps/Weather
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
@@ -16,7 +16,7 @@ BuildRequires:	gjs-devel >= 1.71.0
 BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gobject-introspection-devel >= 1.36.0
 BuildRequires:	gtk4-devel >= 4.5
-BuildRequires:	libadwaita-devel
+BuildRequires:	libadwaita-devel >= 1.2
 BuildRequires:	libgweather4-devel >= 4.0
 BuildRequires:	meson >= 0.50.0
 BuildRequires:	ninja >= 1.5
@@ -32,7 +32,7 @@ Requires:	glib2 >= 1:2.36.0
 Requires:	gobject-introspection >= 1.36.0
 Requires:	gtk4 >= 4.5
 Requires:	hicolor-icon-theme
-Requires:	libadwaita
+Requires:	libadwaita >= 1.2
 Requires:	libgweather4 >= 4.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
