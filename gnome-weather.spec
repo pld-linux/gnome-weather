@@ -2,12 +2,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	47.0
+Version:	48.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-weather/47/%{name}-%{version}.tar.xz
-# Source0-md5:	860b86e104dc575421c378a5cc5ffb73
+Source0:	https://download.gnome.org/sources/gnome-weather/48/%{name}-%{version}.tar.xz
+# Source0-md5:	35858b4f07ede013a835033b0b258d19
 URL:		https://apps.gnome.org/Weather/
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
@@ -21,7 +21,7 @@ BuildRequires:	libgweather4-devel >= 4.0
 BuildRequires:	meson >= 0.59.0
 BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig >= 1:0.22
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.36.0
@@ -52,14 +52,14 @@ serwisy internetowe.
 %setup -q
 
 %build
-%meson build
+%meson
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 %find_lang org.gnome.Weather
 
@@ -89,6 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/org.gnome.Weather/org.gnome.Weather.*.gresource
 %{_desktopdir}/org.gnome.Weather.desktop
 %{_iconsdir}/hicolor/scalable/apps/org.gnome.Weather.svg
+%{_iconsdir}/hicolor/scalable/status/checkmark-symbolic.svg
 %{_iconsdir}/hicolor/scalable/status/temperature-symbolic.svg
 %{_iconsdir}/hicolor/scalable/status/weather-*.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Weather-symbolic.svg
