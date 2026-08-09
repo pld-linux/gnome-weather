@@ -2,12 +2,12 @@
 Summary:	A weather application for GNOME
 Summary(pl.UTF-8):	Aplikacja pogodowa dla GNOME
 Name:		gnome-weather
-Version:	48.0
+Version:	50.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-weather/48/%{name}-%{version}.tar.xz
-# Source0-md5:	35858b4f07ede013a835033b0b258d19
+Source0:	https://download.gnome.org/sources/gnome-weather/50/%{name}-%{version}.tar.xz
+# Source0-md5:	e87b6ac7ad2cbdcfa23a51c5e4cefce2
 URL:		https://apps.gnome.org/Weather/
 BuildRequires:	appstream-glib
 BuildRequires:	geoclue2-devel >= 2.3.1
@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.gnome.Weather.BackgroundService.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Weather.gschema.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.Weather.search-provider.ini
-%{_datadir}/metainfo/org.gnome.Weather.appdata.xml
+%{_datadir}/metainfo/org.gnome.Weather.metainfo.xml
 %dir %{_datadir}/org.gnome.Weather
 %attr(755,root,root) %{_datadir}/org.gnome.Weather/org.gnome.Weather
 %attr(755,root,root) %{_datadir}/org.gnome.Weather/org.gnome.Weather.BackgroundService
