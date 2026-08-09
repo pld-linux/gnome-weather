@@ -1,0 +1,11 @@
+--- gnome-weather-50.0/tsconfig.json.orig	2026-03-12 20:37:40.000000000 +0100
++++ gnome-weather-50.0/tsconfig.json	2026-08-09 20:53:58.879723497 +0200
+@@ -4,6 +4,8 @@
+         "strict": true,
+         "target": "ES2022",
+         "baseUrl": ".",
++        "rootDir": "src",
++        "ignoreDeprecations": "6.0",
+         "moduleResolution": "bundler",
+         "module": "ES2022",
+         "lib": [
