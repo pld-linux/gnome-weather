@@ -9,7 +9,7 @@ Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/gnome-weather/50/%{name}-%{version}.tar.xz
 # Source0-md5:	e87b6ac7ad2cbdcfa23a51c5e4cefce2
 URL:		https://apps.gnome.org/Weather/
-BuildRequires:	appstream-glib
+BuildRequires:	AppStream
 BuildRequires:	geoclue2-devel >= 2.3.1
 BuildRequires:	gettext-tools
 BuildRequires:	gjs-devel >= 1.71.0
