@@ -20,6 +20,7 @@ BuildRequires:	libadwaita-devel >= 1.4
 BuildRequires:	libgweather4-devel >= 4.0
 BuildRequires:	meson >= 0.59.0
 BuildRequires:	ninja >= 1.5
+BuildRequires:	nodejs-typescript
 BuildRequires:	pkgconfig >= 1:0.22
 BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	tar >= 1:1.22
